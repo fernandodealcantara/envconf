@@ -1,0 +1,28 @@
+# .zsh_plugins.txt
+
+# comments are supported like this
+zsh-users/zsh-completions
+
+# empty lines are skipped
+
+# annotations are also allowed:
+ohmyzsh/ohmyzsh   path:lib/clipboard.zsh
+ohmyzsh/ohmyzsh   path:plugins/colored-man-pages
+romkatv/zsh-bench kind:path
+olets/zsh-abbr    kind:defer
+
+# prompts:
+#   with prompt plugins, remember to add this to your .zshrc:
+#   `autoload -Uz promptinit && promptinit && prompt pure`
+sindresorhus/pure     kind:fpath
+romkatv/powerlevel10k
+
+# other plugins
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
+ohmyzsh/ohmyzsh   path:plugins/command-not-found
+ohmyzsh/ohmyzsh   path:plugins/git-extras
+marlonrichert/zsh-autocomplete
+bobthecow/git-flow-completion
+zsh-users/zsh-completions
