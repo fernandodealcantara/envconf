@@ -1,0 +1,15 @@
+[core]
+	editor = nvim
+	autoCRLF = false
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = "Fernando de Alcantara"
+	email = 45339608+fernandodealcantara@users.noreply.github.com
+[commit]
+	template = ~/.gitmessage.txt

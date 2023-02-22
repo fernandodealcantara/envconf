@@ -1,17 +1,6 @@
 ##########################################################################################
 # custom config
-[ -f ~/.dotfiles/custom.sh ] && source ~/.dotfiles/custom.sh
-# functions
-[ -f ~/.dotfiles/functions.sh ] && source ~/.dotfiles/functions.sh
-
-##########################################################################################
-# ssh
-if [ ! -e ~/.ssh/id_ed25519.pub ]
-then
-    ssh-keygen -t ed25519 -C $USER_EMAIL
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519
-fi
+[ -f ~/.myenv.sh ] && source ~/.myenv.sh
 
 ##########################################################################################
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -23,9 +12,10 @@ fi
 
 ##########################################################################################
 # antidote
+
 # source antidote
-source ~/.antidote/antidote.zsh
-# generate and source plugins from ~/.zsh_plugins.txt
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
 ##########################################################################################

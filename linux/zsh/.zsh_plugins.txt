@@ -11,6 +11,8 @@ ohmyzsh/ohmyzsh   path:plugins/colored-man-pages
 romkatv/zsh-bench kind:path
 olets/zsh-abbr    kind:defer
 
+agkozak/zsh-z # allows to jump quickly to directories
+
 # prompts:
 #   with prompt plugins, remember to add this to your .zshrc:
 #   `autoload -Uz promptinit && promptinit && prompt pure`
