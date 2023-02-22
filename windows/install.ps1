@@ -28,6 +28,7 @@ winget install KDE.Okular # PDF reader
 winget install JAMSoftware.TreeSize.Free # Disk usage analyzer
 winget install IrfanSkiljan.IrfanView  # Image viewer
 winget install Microsoft.DirectX # DirectX
+winget install autoruns # Startup applications manager
 
 winget install JanDeDobbeleer.OhMyPosh -s winget # Install Oh My Posh
 
