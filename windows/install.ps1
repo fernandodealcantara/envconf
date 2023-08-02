@@ -28,6 +28,7 @@ winget install KDE.Okular # PDF reader
 winget install JAMSoftware.TreeSize.Free # Disk usage analyzer
 winget install Microsoft.DirectX # DirectX
 winget install JanDeDobbeleer.OhMyPosh -s winget # Install Oh My Posh
+winget install MSEdgeRedirect # Redirects Microsoft Edge links to default browser
 
 # Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
