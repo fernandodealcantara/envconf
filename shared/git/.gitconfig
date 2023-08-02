@@ -9,7 +9,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = "Fernando de Alcantara"
+	name = Fernando
 	email = 45339608+fernandodealcantara@users.noreply.github.com
 [commit]
 	template = ~/.gitmessage.txt

@@ -26,20 +26,8 @@ winget install VideoLAN.VLC # Video player
 winget install OBSProject.OBSStudio # Screen recorder
 winget install KDE.Okular # PDF reader
 winget install JAMSoftware.TreeSize.Free # Disk usage analyzer
-winget install IrfanSkiljan.IrfanView  # Image viewer
 winget install Microsoft.DirectX # DirectX
-winget install autoruns # Startup applications manager
-
 winget install JanDeDobbeleer.OhMyPosh -s winget # Install Oh My Posh
-
-winget install Spotify.Spotify # Music player
-
-# Communication
-winget install Discord.Discord 
-winget install Microsoft.Teams
-winget install SlackTechnologies.Slack
-winget install WhatsApp.WhatsApp
-winget install Telegram.TelegramDesktop
 
 # Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -55,7 +43,6 @@ PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force # Install posh-g
 # z-location
 PowerShellGet\Install-Module ZLocation -Scope CurrentUser -Force # Install z-location
 
-
 # Create folders
 # create repositories folder
 Write-Output "Creating folders..."
@@ -64,7 +51,6 @@ if (!(Test-Path $repositoriesPath)) {
   Write-Output "Creating folder: $repositoriesPath"
   New-Item -ItemType Directory -Path $repositoriesPath -Force
 }
-
 
 # Symlinking
 Write-Output "Symlinking..."
@@ -102,15 +88,6 @@ New-Item -ItemType SymbolicLink -Path $symLinkPath -Target $fileToLink -Force
 $symLinkPath = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 $fileToLink = "$PWD\windows-terminal-settings.json"
 New-Item -ItemType SymbolicLink -Path $symLinkPath -Target $fileToLink -Force
-
-
-# Auto install local fonts
-Write-Output "Installing fonts..."
-Get-ChildItem -Path "$PWD\..\shared\fonts\.fonts" -Filter "*.ttf" -Recurse | ForEach-Object {
-  $font = $_.FullName
-  Write-Output "Installing $font"
-  Add-Content -Path "$env:LOCALAPPDATA\Microsoft\Windows\Fonts\fontlist.txt" -Value $font -Force
-}
 
 # Install WSL
 Write-Output "WSL installation..."

@@ -38,6 +38,7 @@ cd linux
 You should run `install.sh` script as an administrator.
 
 ## Manual steps
+- Install fonts located in shared/fonts/.fonts in Windows
 - [ ] Configure myenv.sh (aliases, environment variables and functions) to your needs.
 - [ ] Configure .gitconfig to your needs.
 - [ ] Configure folders that will be created (`install.ps1` creates a repositories folder). For example, I have a folder called `D:\repositories` where I keep all my repositories. You can change it to `D:\projects` `C:\Users\<username>\projects` or whatever you want.

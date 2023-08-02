@@ -86,32 +86,3 @@ chsh -s $(which zsh) # change shell to zsh
 
 # ASDF SETUPS
 source ~/.asdf/asdf.sh # load asdf
-
-function nodeSetup() {
-    echo -e "\e[32mSetting up node\e[0m"
-    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-    asdf install nodejs latest
-    asdf global nodejs latest
-
-    npm install -g tldr
-    npm install -g yarn
-    npm install -g typescript
-}
-
-# PYTHON
-function pythonSetup() {
-    echo -e "\e[32mSetting up python\e[0m"
-    asdf plugin-add python
-    asdf install python latest
-    asdf global python latest
-}
-
-# RUST
-function rustSetup() {
-    echo -e "\e[32mSetting up rust\e[0m"
-    asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
-    asdf install rust latest
-    asdf global rust latest
-}
-
-nodeSetup # install node
