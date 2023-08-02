@@ -3,7 +3,7 @@ Write-Output "Installing packages..."
 
 # Dev tools
 winget install Microsoft.WindowsTerminal
-winget install Microsoft.VisualStudioCode
+winget install Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'
 winget install Neovim.Neovim
 winget install Microsoft.PowerShell
 winget install Microsoft.Powertoys  
